@@ -6,14 +6,13 @@ from tqdm import tqdm as tqdm
 
 
 class Race:
-    def __init__(self,log_place,log_cord,log_ground,log_meter,src,road,url_topic,month):
+    def __init__(self,log_place,log_cord,log_ground,log_meter,src,road,month):
         self.log_place = log_place
         self.log_cord = log_cord
         self.log_ground = log_ground
         self.log_meter = log_meter
         self.src = src
         self.road = road
-        self.url_topic = url_topic
         self.month = month
         
         
@@ -504,8 +503,6 @@ class Tend:
                 self.data_jockey.loc[i,"Unnamed: 0"] = "Ｍデムーロ"
                 self.data_jockey.loc[i,"name"] = "Ｍデムーロ"
                 
-
-
 
 class Horse:
     def __init__(self,race,decadeTend):
@@ -1193,6 +1190,3 @@ class Exp:
             self.expCnt = self.expCnt + len(df)
         except: 
             print("err")
-
-
-

@@ -6,11 +6,10 @@ from tqdm import tqdm as tqdm
 from class_main import Race
 from class_main import Tend
 from class_main import Exp
-from class_main import Horse
 
 print("競馬場")    
 log_place = input()
-print("コード入力 札幌:1 東京:5 中山:6 中京:7 阪神:9")
+print("コード入力 大井:44 名古屋:48")
 log_cord = int(input())
 print("芝 or ダ")
 log_ground = input()
@@ -23,7 +22,7 @@ road = input()
 print("月")
 month = input()
 # topicからレースurlを取得
-race = Race(log_place,log_cord ,log_ground,log_meter,src,road,url_topic,month)
+race = Race(log_place,log_cord ,log_ground,log_meter,src,road,month)
 race.get_url()
 decadeURL = race.get_link()
 
